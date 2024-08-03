@@ -8,7 +8,7 @@
 // @match       https://x.com/*
 // @match       https://mobile.x.com/*
 // @run-at      document-start
-// @version     157
+// @version     158
 // @downloadURL https://update.greasyfork.org/scripts/387773/Control%20Panel%20for%20Twitter.user.js
 // @updateURL https://update.greasyfork.org/scripts/387773/Control%20Panel%20for%20Twitter.meta.js
 // ==/UserScript==
@@ -2915,6 +2915,9 @@ const configureCss = (() => {
             flex: 0;
           }
           ${profileTabsList} > div > ${upsellTabLinks} {
+            display: none;
+          }
+          .OwnProfile [data-testid="UserName"] > div:has(> div > a[href^="/i/premium"]) {
             display: none;
           }
         }
