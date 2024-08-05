@@ -25,6 +25,22 @@
         let newProtocol = currentUrl.replace('https://x.com', 'twitter://');
         window.location.href = newProtocol.replace('?q', '?query');
     } else if (currentUrl.includes('x.com/home')) {
-        window.location.href = window.location.href.replace('https://x.com/home', 'twitter://timeline');
-    }
+        window.location.href = 'twitter://timeline';
+    } else if (currentUrl.includes('x.com/notifications')) {
+        window.location.href = 'twitter://mentions';
+    } else if (currentUrl.includes('x.com/intent/post?text')) {
+        let withText = currentUrl.replace('?text', '?message');
+        window.location.href = withText.replace('https://x.com/intent/', 'twitter://');
+    } else if (currentUrl.includes('x.com/intent/tweet?text')) {
+        let withText = currentUrl.replace('?text', '?message');
+        window.location.href = withText.replace('https://x.com/intent/tweet/', 'twitter://post');
+    } else if (currentUrl.includes('x.com/compose/tweet?text')) {
+        let withText = currentUrl.replace('?text', '?message');
+        window.location.href = withText.replace('https://x.com/compose/tweet/', 'twitter://post');
+} else if (currentUrl.includes('x.com/compose/post?text')) {
+        let withText = currentUrl.replace('?text', '?message');
+        window.location.href = withText.replace('https://x.com/compose/', 'twitter://');
+} else if (currentUrl.split('/').length - 1 == 3) {
+        window.location.href = window.location.href.replace('https://x.com/', 'twitter://user/?screen_name=');
+}
 })();
