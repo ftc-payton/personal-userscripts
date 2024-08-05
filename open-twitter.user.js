@@ -24,5 +24,7 @@
     } else if (currentUrl.includes('x.com/search?q')) {
         let newProtocol = currentUrl.replace('https://x.com', 'twitter://');
         window.location.href = newProtocol.replace('?q', '?query');
+    } else if (currentUrl.includes('x.com/home')) {
+        window.location.href = window.location.href.replace('https://x.com/home', 'twitter://timeline');
     }
 })();
