@@ -19,5 +19,10 @@
         let id = parts.pop();
         let newUrl = 'twitter://status/?id=' + id;
         window.location.href = newUrl;
+    } else if (currentUrl.includes('x.com/explore')) {
+        window.location.href = window.location.href.replace('https://x.com', 'twitter://');
+    } else if (currentUrl.includes('x.com/search?q')) {
+        let newProtocol = currentUrl.replace('https://x.com', 'twitter://');
+        window.location.href = newProtocol.replace('?q', '?query');
     }
 })();
