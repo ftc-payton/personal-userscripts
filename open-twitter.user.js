@@ -41,19 +41,19 @@
         let withText = currentUrl.replace('?text', '?message');
         window.location.href = withText.replace('https://x.com/compose/', 'twitter://');
     } else if (currentUrl.includes('x.com/intent/post?url')) {
-        let withText = currentUrl.replace('?url', '?message');
+        let withText = currentUrl.replace('?url=', '?message=');
         let extText = currentUrl.replace('&text=', '%20');
-        window.location.href = extText.replace('https://x.com/intent/', 'https://');
+        window.location.href = extText.replace('https://x.com/intent/', 'twitter://');
     } else if (currentUrl.includes('x.com/intent/tweet?url')) {
-        let withText = currentUrl.replace('?url', '?message');
+        let withText = currentUrl.replace('?url=', '?message=');
         let extText = currentUrl.replace('&text=', '%20');
         window.location.href = extText.replace('https://x.com/intent/tweet/', 'twitter://post');
     } else if (currentUrl.includes('x.com/compose/tweet?url')) {
-        let withText = currentUrl.replace('?url', '?message');
+        let withText = currentUrl.replace('?url=', '?message=');
         let extText = currentUrl.replace('&text=', '%20');
         window.location.href = extText.replace('https://x.com/compose/tweet/', 'twitter://post');
     } else if (currentUrl.includes('x.com/compose/post?url')) {
-        let withText = currentUrl.replace('?url', '?message');
+        let withText = currentUrl.replace('?url=', '?message=');
         let extText = currentUrl.replace('&text=', '%20');
         window.location.href = extText.replace('https://x.com/compose/', 'twitter://');
     } else if (currentUrl.split('/').length - 1 == 3) {
