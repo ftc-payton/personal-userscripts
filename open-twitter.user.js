@@ -1,9 +1,9 @@
 // ==UserScript==
-// @name         Replace HTTPS with Custom Protocol
+// @name         Open Sideloaded Twitter App
 // @namespace    http://tampermonkey.net/
-// @version      0.1
-// @description  Replaces https:// with myapp:// to open an app
-// @author       Your Name
+// @version      1.0
+// @description  Prompts to open sideloaded Twitter on iOS
+// @author       ftc-payton
 // @match        https://x.com/*
 // @grant        none
 // ==/UserScript==
