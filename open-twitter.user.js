@@ -43,7 +43,7 @@
     } else if (currentUrl.includes('x.com/intent/post?url')) {
         let withText = currentUrl.replace('?url', '?message');
         let extText = currentUrl.replace('&text=', '%20');
-        window.location.href = extText.replace('https://x.com/intent/', 'twitter://');
+        window.location.href = extText.replace('https://x.com/intent/', 'https://');
     } else if (currentUrl.includes('x.com/intent/tweet?url')) {
         let withText = currentUrl.replace('?url', '?message');
         let extText = currentUrl.replace('&text=', '%20');
